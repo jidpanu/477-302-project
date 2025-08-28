@@ -1,0 +1,128 @@
+C:\Users\6610510050>cd 477-302
+
+C:\Users\6610510050\477-302>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A6EE-4B51
+
+ Directory of C:\Users\6610510050\477-302
+
+08/26/2025  04:27 PM    <DIR>          .
+08/26/2025  03:29 PM    <DIR>          ..
+08/26/2025  03:10 PM             2,387 index.html
+08/26/2025  03:46 PM                52 README.md
+               2 File(s)          2,439 bytes
+               2 Dir(s)  234,501,738,496 bytes free
+
+C:\Users\6610510050\477-302>git branch
+* master
+
+C:\Users\6610510050\477-302>git branch dev-jidpanu
+
+C:\Users\6610510050\477-302>git branch
+  dev-jidpanu
+* master
+
+C:\Users\6610510050\477-302>git switch dev-jidpanu
+Switched to branch 'dev-jidpanu'
+
+C:\Users\6610510050\477-302>git branch
+* dev-jidpanu
+  master
+
+C:\Users\6610510050\477-302>git status
+On branch dev-jidpanu
+nothing to commit, working tree clean
+
+C:\Users\6610510050\477-302>git status
+On branch dev-jidpanu
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\6610510050\477-302>git add .
+
+C:\Users\6610510050\477-302>git commit -m "add menu"
+[dev-jidpanu b5b0eb1] add menu
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+C:\Users\6610510050\477-302>git push --set-upstream origin dev-jidpanu
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 362 bytes | 362.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'dev-jidpanu' on GitHub by visiting:
+remote:      https://github.com/jidpanu/477-302-project/pull/new/dev-jidpanu
+remote:
+To https://github.com/jidpanu/477-302-project
+ * [new branch]      dev-jidpanu -> dev-jidpanu
+branch 'dev-jidpanu' set up to track 'origin/dev-jidpanu'.
+
+C:\Users\6610510050\477-302>git branch
+* dev-jidpanu
+  master
+
+C:\Users\6610510050\477-302>git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\6610510050\477-302>git branch
+  dev-jidpanu
+* master
+
+C:\Users\6610510050\477-302>git merge dev-jidpanu
+Updating 21c110b..b5b0eb1
+Fast-forward
+ index.html | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+C:\Users\6610510050\477-302>git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jidpanu/477-302-project
+   21c110b..b5b0eb1  master -> master
+
+--- อธิบายขั้นตอนการใช้ git จาก log นี้ ---
+
+1. สร้าง branch ใหม่ชื่อ dev-jidpanu เพื่อแยกงานจาก master  
+   คำสั่ง: `git branch dev-jidpanu`
+
+2. สลับไปทำงานบน branch dev-jidpanu  
+   คำสั่ง: `git switch dev-jidpanu`
+
+3. แก้ไขไฟล์ index.html แล้วเช็คสถานะด้วย git status  
+   คำสั่ง: `git status`
+
+4. ดูความแตกต่างของไฟล์ที่แก้ไขกับไฟล์เดิม  
+   คำสั่ง: `git diff`  
+   (แสดงรายละเอียดว่าแก้ไขอะไรไปบ้างในไฟล์)
+
+5. ใช้ git add . เพื่อเพิ่มไฟล์ที่แก้ไขเข้า staging area  
+   คำสั่ง: `git add .`
+
+6. ใช้ git commit -m "add menu" เพื่อบันทึกการเปลี่ยนแปลงพร้อมข้อความ  
+   คำสั่ง: `git commit -m "add menu"`
+
+7. ใช้ git push --set-upstream origin dev-jidpanu เพื่อส่ง branch dev-jidpanu ขึ้น GitHub และตั้งให้เชื่อมกับ remote branch  
+   คำสั่ง: `git push --set-upstream origin dev-jidpanu`
+
+8. สลับกลับไป branch master ด้วย git switch master  
+   คำสั่ง: `git switch master`
+
+9. ใช้ git merge dev-jidpanu เพื่อรวมงานจาก dev-jidpanu เข้าสู่ master (fast-forward)  
+   คำสั่ง: `git merge dev-jidpanu`
+
+10. ใช้ git push เพื่อส่งการเปลี่ยนแปลงของ master ขึ้น GitHub  
+    คำสั่ง: `git push`
+
+**สรุป:**  
+เป็น workflow พื้นฐานสำหรับการพัฒนาโปรเจกต์แบบทีมด้วย git โดยแยกงานเป็น branch, commit, push, merge และ sync กับ remote
+
+--- จบการอธิบาย ---
+
+C:\Users\6610510050\477-302>
